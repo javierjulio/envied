@@ -1,0 +1,5 @@
+variable :REDIS_URL, :string, default: 'redis://localhost:6379'
+
+group :production do
+  variable :SECRET_KEY_BASE
+end

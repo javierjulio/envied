@@ -8,8 +8,8 @@ class ENVied
       instance_eval(&block) if block_given?
     end
 
-    def self.load(**options)
-      envfile = File.expand_path('Envfile')
+    def self.load(file='Envfile', **options)
+      envfile = File.expand_path(file)
       new(**options).tap do |v|
         v.instance_eval(File.read(envfile), envfile)
       end

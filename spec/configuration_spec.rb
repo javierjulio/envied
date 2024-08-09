@@ -9,6 +9,16 @@ RSpec.describe ENVied::Configuration do
   end
   attr_reader :config
 
+  describe '.load' do
+    it 'loads a sample Envfile' do
+      config = described_class.load(File.join(SAMPLES_PATH, "Envfile"))
+      expect(config.variables).to match_array([
+        ENVied::Variable.new(:REDIS_URL, :string, group: :default, default: "redis://localhost:6379"),
+        ENVied::Variable.new(:SECRET_KEY_BASE, :string, group: :production)
+      ])
+    end
+  end
+
   describe 'variables' do
     it 'results in an added variable' do
       with_envfile do
