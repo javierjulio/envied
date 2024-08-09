@@ -213,7 +213,7 @@ $ ./bin/heroku-env-check && git push live master
 
 ```bash
 bundle install
-bundle exec rspec
+RUBYOPT="-W:deprecated" bundle exec rspec
 ```
 
 ## Developing

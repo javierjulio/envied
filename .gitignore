@@ -7,8 +7,6 @@
 /spec/reports/
 /spec/examples.txt
 /tmp/
-
+.ruby-version
 # rspec failure tracking
 .rspec_status
-
-Gemfile.lock
