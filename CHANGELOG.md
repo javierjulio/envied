@@ -1,10 +1,12 @@
-## master / unreleased
+# Changelog
 
-* **BREAKING:** Reset library back to the v0.9.2.rc1 release
-* Resolve Ruby 2.7 kwargs deprecations to ensure Ruby 3.0+ support
-* Remove default values deprecation
-* Replace `coercible` dependency with local implementation [#49](https://github.com/eval/envied/pull/49)
-* Require Ruby 3.0+
+## 0.10.0 [☰](https://github.com/javierjulio/envied/compare/v0.9.1..v0.10.0)
+
+* **BREAKING:** This uses the v0.9.2.rc1 tag as its base due to abandonment of later alpha releases
+* Resolves Ruby 2.7 kwargs deprecations to ensure Ruby 3.0+ compatibility
+* Removes default values deprecation (default values remain supported for now)
+* Replaces `coercible` dependency with local implementation [#49](https://github.com/eval/envied/pull/49)
+* Requires Ruby 3.0+
 
 ## 0.9.1 / 2017-07-06
 
