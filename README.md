@@ -21,8 +21,7 @@ For the rationale behind this project, see this [blogpost](http://www.gertgoet.c
   * [More examples](#more-examples)
 * [Command-line interface](#command-line-interface)
 * [How do I...?](#how-do-i)
-* [Testing](#testing)
-* [Developing](#developing)
+* [Development](#development)
 
 ## Quickstart
 
@@ -208,15 +207,8 @@ This way you can do stuff like:
 $ ./bin/heroku-env-check && git push live master
 ```
 
-## Testing
+## Development
 
-```bash
-bundle install
-RUBYOPT="-W:deprecated" bundle exec rspec
-```
-
-## Developing
-
-```bash
-bin/console
-```
+- `bin/setup`
+- Run tests: `RUBYOPT="-W:deprecated" bundle exec rspec`
+- For an interactive console: `bin/console`
