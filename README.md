@@ -38,7 +38,7 @@ variable :PORT, :integer
 ### 2) Check for presence and coercibility
 
 ```ruby
-# during initialization
+# during initialization and in a pre-deploy confirmation workflow
 ENVied.require
 ```
 
@@ -57,21 +57,49 @@ ENVied.FORCE_SSL # => false
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add `envied` to your `Gemfile`:
 
-    gem 'envied'
+```ruby
+gem 'envied'
+```
 
-...then bundle:
+If you are using Rails, add this to `config/application.rb` immediately after `Bundler.require(*Rails.groups)`:
 
-    $ bundle
+```ruby
+ENVied.require(*ENV['ENVIED_GROUPS'] || Rails.groups)
+```
 
-...then for Rails applications:
+If you are not using Rails, add the following snippet (or similar) to your app's initialization:
 
-    $ bundle exec envied init:rails
+```ruby
+ENVied.require(*ENV['ENVIED_GROUPS'] || [:default, ENV['RACK_ENV']])
+```
 
-...or for non-Rails applications:
+Create an `Envfile` with the following as a starter:
 
-    $ bundle exec envied init
+```ruby
+enable_defaults! { ENV['RACK_ENV'] != 'production' }
+
+variable :LOG_LEVEL, :string, default: 'debug'
+
+group :production do
+  variable :SECRET_KEY_BASE
+end
+```
+
+Refer to the [Types](#types) section to start configuring your project's environment variables.
+
+### Pre-deploy ENV check
+
+To confirm that your ENV variables are set in a pre-deploy workflow, provide the application's current ENV to a Ruby script that loads it and runs the envied check.
+
+```ruby
+ENV.replace(your_current_env)
+ENVied.require(*RAILS_GROUPS)
+puts "All required ENV variables are present and valid."
+```
+
+If any required ENV are missing, then the check will fail with an error message listing the missing environment variable names.
 
 ## Configuration
 
