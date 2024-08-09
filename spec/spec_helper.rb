@@ -1,5 +1,16 @@
+if ENV.fetch("COVERAGE", false)
+  require "simplecov"
+  require "simplecov-cobertura"
+  SimpleCov.start do
+    add_filter %r{^/spec/}
+    formatter SimpleCov::Formatter::CoberturaFormatter
+  end
+end
+
 require "bundler/setup"
 require "envied"
+
+SAMPLES_PATH = File.join(File.dirname(__FILE__), "samples")
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
