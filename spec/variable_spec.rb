@@ -1,6 +1,6 @@
 RSpec.describe ENVied::Variable do
-  def variable(*args)
-    described_class.new(*args)
+  def variable(name, type, **options)
+    described_class.new(name, type, **options)
   end
 
   describe 'an instance' do

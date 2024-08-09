@@ -10,7 +10,7 @@ class ENVied
 
     def self.load(**options)
       envfile = File.expand_path('Envfile')
-      new(options).tap do |v|
+      new(**options).tap do |v|
         v.instance_eval(File.read(envfile), envfile)
       end
     end
@@ -30,7 +30,7 @@ class ENVied
         raise ArgumentError, "#{type.inspect} is not a supported type. Should be one of #{coercer.supported_types}"
       end
       options[:group] = current_group if current_group
-      variables << ENVied::Variable.new(name, type, options)
+      variables << ENVied::Variable.new(name, type, **options)
     end
 
     def group(*names, &block)

@@ -5,7 +5,7 @@ RSpec.describe ENVied::Configuration do
   it { is_expected.to respond_to :defaults_enabled? }
 
   def with_envfile(**options, &block)
-    @config = ENVied::Configuration.new(options, &block)
+    @config = ENVied::Configuration.new(**options, &block)
   end
   attr_reader :config
 

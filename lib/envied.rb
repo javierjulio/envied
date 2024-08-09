@@ -14,9 +14,9 @@ class ENVied
 
   def self.require(*args, **options)
     requested_groups = (args && !args.empty?) ? args : ENV['ENVIED_GROUPS']
-    env!(requested_groups, options)
-    error_on_missing_variables!(options)
-    error_on_uncoercible_variables!(options)
+    env!(requested_groups, **options)
+    error_on_missing_variables!(**options)
+    error_on_uncoercible_variables!(**options)
 
     ensure_spring_after_fork_require(args, options)
   end
@@ -52,9 +52,9 @@ class ENVied
     result.any? ? result.map(&:to_sym) : [:default]
   end
 
-  def self.ensure_spring_after_fork_require(args, **options)
+  def self.ensure_spring_after_fork_require(args, options)
     if spring_enabled? && !options[:via_spring]
-      Spring.after_fork { ENVied.require(args, options.merge(via_spring: true)) }
+      Spring.after_fork { ENVied.require(*args, **options.merge(via_spring: true)) }
     end
   end
 
