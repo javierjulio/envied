@@ -1,6 +1,10 @@
 ## master / unreleased
 
-* Removed `coercible` dependency as now all coercion functionality is implemented locally. This is a backwards compatible change. [#49](https://github.com/eval/envied/pull/49)
+* **BREAKING:** Reset library back to the v0.9.2.rc1 release
+* Resolve Ruby 2.7 kwargs deprecations to ensure Ruby 3.0+ support
+* Remove default values deprecation
+* Replace `coercible` dependency with local implementation [#49](https://github.com/eval/envied/pull/49)
+* Require Ruby 3.0+
 
 ## 0.9.1 / 2017-07-06
 
