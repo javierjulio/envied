@@ -1,28 +1,27 @@
 ## master / unreleased
 
-* Now requiring Ruby 2.4+ [#48], [#51]
-* Removed `coercible` dependency as now all coercion functionality is implemented locally. This is a backwards compatible change. [#49]
+* Removed `coercible` dependency as now all coercion functionality is implemented locally. This is a backwards compatible change. [#49](https://github.com/eval/envied/pull/49)
 
 ## 0.9.1 / 2017-07-06
 
-* Updates `envied check:heroku` to support multiline ENV variables [#42](../../pull/42)
+* Updates `envied check:heroku` to support multiline ENV variables [#42](https://github.com/eval/envied/pull/42)
 
 ## 0.9.0 / 2017-03-01
 
-* Support multiple groups [#16](../../pull/16)
+* Support multiple groups [#16](https://github.com/eval/envied/pull/16)
 * Replaced rack dependency with stdlib solution using CGI for supporting hash type
 * Now requiring Ruby 2.1.x and up
-* Added float type which resolves [#30](../../pull/30)
-* Added uri type [#22](../../pull/22)
-* Updated extractor to find interpolated ENV vars which fixes [#21](../../pull/21)
-* Various typo fixes [#24](../../pull/24) and [#28](../../pull/28)
+* Added float type which resolves [#30](https://github.com/eval/envied/pull/30)
+* Added uri type [#22](https://github.com/eval/envied/pull/22)
+* Updated extractor to find interpolated ENV vars which fixes [#21](https://github.com/eval/envied/pull/21)
+* Various typo fixes [#24](https://github.com/eval/envied/pull/24) and [#28](https://github.com/eval/envied/pull/28)
 * Resolved warnings when running tests
 
 ## 0.8.2 / 2017-02-21
 
 ### Added
 
- * Rails 5 support [#25](../../pull/25)
+ * Rails 5 support [#25](https://github.com/eval/envied/pull/25)
 
 ### Fixed
 
