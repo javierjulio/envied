@@ -1,5 +1,4 @@
 require 'envied/version'
-require 'envied/cli'
 require 'envied/env_proxy'
 require 'envied/coercer'
 require 'envied/coercer/envied_string'
@@ -62,7 +61,7 @@ class ENVied
     if defined?(ActiveSupport::Deprecation.warn) && !required?
       ActiveSupport::Deprecation.warn(<<~MSG)
         It's no longer recommended to `ENVied.require` within ENVied.springify's
-        block. Please re-run `envied init:rails` to upgrade.
+        block.
       MSG
     end
     if spring_enabled?
