@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.0 [☰](https://github.com/javierjulio/envied/compare/v0.10.0..v0.11.0)
+
+* Set gemspec metadata URLs (no library code changes)
+
 ## 0.10.0 [☰](https://github.com/javierjulio/envied/compare/v0.9.1..v0.10.0)
 
 * **BREAKING:** This uses the v0.9.2.rc1 tag as its base due to abandonment of later alpha releases
