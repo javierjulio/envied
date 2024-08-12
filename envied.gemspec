@@ -10,6 +10,12 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/javierjulio/envied"
   spec.license = "MIT"
 
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
+  spec.metadata["wiki_uri"] = "#{spec.homepage}/wiki"
+  spec.metadata["rubygems_mfa_required"] = "true"
+
   spec.files = Dir["README.md", "LICENSE*", "lib/**/*.rb", "exe/**/*"]
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
