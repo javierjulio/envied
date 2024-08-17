@@ -17,12 +17,8 @@ Gem::Specification.new do |spec|
   spec.metadata["wiki_uri"] = "#{spec.homepage}/wiki"
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  spec.files = Dir["README.md", "LICENSE*", "lib/**/*.rb", "exe/**/*"]
-  spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.files = Dir["README.md", "LICENSE*", "lib/**/*.rb"]
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = ">= 3.0"
-
-  spec.add_dependency "thor", ">= 0.15", "< 2.0"
 end
