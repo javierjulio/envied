@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 [☰](https://github.com/javierjulio/envied/compare/v0.11.0..v1.0.0)
+
+* **Breaking**: Removes CLI and thor dependency
+* Updates gemspec metadata URLs
+
 ## 0.11.0 [☰](https://github.com/javierjulio/envied/compare/v0.10.0..v0.11.0)
 
 * Set gemspec metadata URLs (no library code changes)
