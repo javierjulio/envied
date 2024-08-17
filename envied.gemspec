@@ -10,7 +10,8 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/javierjulio/envied"
   spec.license = "MIT"
 
-  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "#{spec.homepage}.git"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
   spec.metadata["wiki_uri"] = "#{spec.homepage}/wiki"
