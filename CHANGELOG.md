@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Bump minimum required Ruby version to 3.1
+
 ## 1.0.0 [☰](https://github.com/javierjulio/envied/compare/v0.11.0..v1.0.0)
 
 * **Breaking**: Removes CLI and thor dependency
