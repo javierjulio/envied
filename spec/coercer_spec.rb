@@ -255,7 +255,7 @@ RSpec.describe ENVied::Coercer do
         {
           'a=1' => {'a' => '1'},
           'a=1&b=2' => {'a' => '1', 'b' => '2'},
-          'a=&b=2' => {'a' => '', 'b' => '2'},
+          'a=&b=2' => {'a' => nil, 'b' => '2'},
           'a&b=2' => {'a' => nil, 'b' => '2'},
         }.each do |value, hash|
           expect(coerce(value, :hash)).to eq hash
