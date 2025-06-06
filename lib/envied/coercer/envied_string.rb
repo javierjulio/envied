@@ -27,8 +27,8 @@ class ENVied::Coercer::ENViedString
   end
 
   def to_hash(str)
-    require 'cgi'
-    ::CGI.parse(str).map { |key, values| [key, values[0]] }.to_h
+    require 'uri'
+    ::URI.decode_www_form(str).map { |key, values| [key, values[0]] }.to_h
   end
 
   def to_string(str)

@@ -282,7 +282,7 @@ RSpec.describe ENVied do
         end
 
         it 'yields hash from string' do
-          expect(ENVied.FOO).to eq({ 'a' => '1', 'b' => '', 'c' => nil })
+          expect(ENVied.FOO).to eq({ 'a' => '1', 'b' => nil, 'c' => nil })
         end
 
         it 'yields hash from an empty string' do
