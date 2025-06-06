@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+* **Breaking**: Replace `CGI.parse` with `URI.decode_www_form` for hash type.
 * Bump minimum required Ruby version to 3.1
 
 ## 1.0.0 [☰](https://github.com/javierjulio/envied/compare/v0.11.0..v1.0.0)
