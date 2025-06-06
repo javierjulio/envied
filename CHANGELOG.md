@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.0.0 [☰](https://github.com/javierjulio/envied/compare/v1.0.0..v2.0.0)
+
 * **Breaking**: Replace `CGI.parse` with `URI.decode_www_form` for hash type.
 * Bump minimum required Ruby version to 3.2
 

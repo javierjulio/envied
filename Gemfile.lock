@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    envied (1.0.0)
+    envied (2.0.0)
 
 GEM
   remote: https://rubygems.org/
